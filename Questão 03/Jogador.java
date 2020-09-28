@@ -9,6 +9,18 @@ O jogador também deve ter um método `recebeCarta(Carta c)` que insere
 uma carta no vetor `mao`, na posição `indiceMao`. Você deve incrementar 
 `indiceMao` após receber a carta. 
 */
+import java.util.ArrayList;
 public class Jogador {
+    private ArrayList<Carta> mao;
+    private int indiceMao;
+
+    public Jogador() {
+		this.mao       = new ArrayList<Carta>[3];
+		this.indiceMao = 0;
+    }
     
+    public void recebeCarta(Carta c) {
+		this.mao.add(this.indiceMao, c);
+		this.indiceMao ++;
+	}
 }
